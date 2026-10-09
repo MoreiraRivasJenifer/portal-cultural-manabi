@@ -1,0 +1,2207 @@
+/* ==============================
+   ESTILOS GENERALES
+   ============================== */
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* ==============================
+   BARRA DE NAVEGACIÓN
+   ============================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 60px;
+  box-sizing: border-box;
+
+  background: rgba(20, 25, 22, 0.85);
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--blanco-calido);
+}
+
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--dorado);
+}
+
+
+/* ==============================
+   PORTADA
+   ============================== */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 30px 50px;
+
+  background:
+    linear-gradient(
+      rgba(10, 20, 15, 0.40),
+      rgba(10, 20, 15, 0.60)
+    ),
+    url('/images/manabi-hero.jpg');
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+
+  color: var(--dorado);
+}
+
+.hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  margin: 0;
+
+  letter-spacing: 12px;
+  font-weight: 400;
+
+  color: var(--blanco-calido);
+}
+
+.hero h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  margin: 10px 0 30px;
+
+  color: var(--blanco-calido);
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto 35px;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  color: var(--blanco-calido);
+}
+
+
+/* ==============================
+   BOTÓN
+   ============================== */
+
+.hero-button {
+  display: inline-block;
+
+  padding: 14px 30px;
+
+  border: 1px solid white;
+
+  color: white;
+  text-decoration: none;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background: white;
+  color: #162018;
+}
+
+
+/* ==============================
+   SECCIONES
+   ============================== */
+
+.section {
+  min-height: 60vh;
+
+  padding: 120px 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #f4f0e8;
+  color: #1b261e;
+}
+
+.section:nth-child(even) {
+  background: #e8e1d3;
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 700px;
+  margin: 0 auto;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .navbar nav {
+    gap: 12px;
+  }
+
+  .navbar nav a {
+    font-size: 0.8rem;
+  }
+
+  .hero h1 {
+    letter-spacing: 6px;
+  }
+
+}
+
+/* ==============================
+   CONOCE MANABÍ
+   ============================== */
+
+.province-section {
+  padding: 90px 10% 55px;
+  background: var(--blanco-calido);
+  color: var(--verde-manabi);
+}
+
+.province-intro {
+  max-width: 800px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.section-label {
+  margin-bottom: 18px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.province-intro h2 {
+  margin: 0 0 25px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+}
+
+.province-intro > p:last-child {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.province-cards {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+
+  background: #cfc7b8;
+}
+
+.province-card {
+  min-height: 260px;
+  padding: 35px 30px;
+
+  background: var(--blanco-calido);
+
+  transition: 0.3s;
+}
+
+.province-card:hover {
+  background: var(--arena);
+  transform: translateY(-5px);
+}
+
+.card-number {
+  display: block;
+  margin-bottom: 35px;
+
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.province-card h3 {
+  margin: 0 0 15px;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.province-card p {
+  margin: 0;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 900px) {
+
+  .province-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .province-section {
+    padding: 90px 25px;
+  }
+
+  .province-cards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ==============================
+   GASTRONOMÍA
+   ============================== */
+
+.gastronomy-section {
+  min-height: 100vh;
+  padding: 120px 10%;
+  background: var(--arena);
+  color: var(--verde-manabi);
+}
+
+.gastronomy-intro {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.gastronomy-intro .section-label,
+.gastronomy-intro h2 {
+  text-align: center;
+}
+
+.gastronomy-intro h2 {
+  margin: 0 0 35px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+}
+
+.gastronomy-intro p:not(.section-label) {
+  max-width: 1000px;
+  margin: 0 0 25px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+.gastronomy-quote {
+  max-width: 850px;
+  margin: 80px auto 0;
+  padding: 35px 50px;
+  border-top: 1px solid var(--dorado);
+  border-bottom: 1px solid var(--dorado);
+  text-align: center;
+}
+
+.gastronomy-quote p {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--verde-manabi);
+}
+
+@media (max-width: 600px) {
+  .gastronomy-section {
+    padding: 90px 25px;
+  }
+
+  .gastronomy-quote {
+    padding: 30px 20px;
+    margin-top: 60px;
+  }
+}
+
+.dish-grid {
+  max-width: 1100px;
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+}
+
+.dish-card {
+  grid-column: span 2;
+  background: var(--blanco-calido);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.dish-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.dish-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.dish-card:hover {
+  transform: translateY(-6px);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 230px;
+  display: block;
+  object-fit: cover;
+}
+
+.dish-content {
+  padding: 25px 25px 30px;
+}
+
+.dish-content h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.dish-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+@media (max-width: 900px) {
+  .dish-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dish-card,
+  .dish-card:nth-child(4),
+  .dish-card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .dish-grid {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+
+  .dish-card,
+  .dish-card:nth-child(4),
+  .dish-card:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  .dish-card img {
+    height: 220px;
+  }
+}
+
+.gastronomy-variety {
+  max-width: 900px;
+  margin: 70px auto 0;
+  padding-top: 35px;
+  border-top: 1px solid var(--dorado);
+}
+
+.gastronomy-variety p {
+  margin: 0 0 22px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+.gastronomy-variety p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .gastronomy-variety {
+    margin-top: 60px;
+    padding-top: 30px;
+  }
+}
+
+.ingredients-section {
+  max-width: 1100px;
+  margin: 110px auto 0;
+  padding-top: 80px;
+  border-top: 1px solid var(--dorado);
+}
+
+.ingredients-intro {
+  max-width: 850px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.ingredients-intro h2 {
+  margin: 0 0 25px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.ingredients-intro > p:last-child {
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+/* BLOQUES DE INGREDIENTES */
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredient-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 180px;
+  border-top: 1px solid #c9bfae;
+}
+
+.ingredient-row:last-child {
+  border-bottom: 1px solid #c9bfae;
+}
+
+.ingredient-image {
+  width: 280px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.ingredient-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ingredient-row:hover .ingredient-image img {
+  transform: scale(1.03);
+}
+
+.ingredient-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 40px;
+  background: var(--blanco-calido);
+}
+
+.ingredient-content span {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.ingredient-content h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.ingredient-content p {
+  max-width: 600px;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+/* ALTERNAR IMAGEN Y TEXTO */
+
+.ingredient-row-reverse {
+  grid-template-columns: 1fr 280px;
+}
+
+.ingredient-row-reverse .ingredient-image {
+  order: 2;
+}
+
+.ingredient-row-reverse .ingredient-content {
+  order: 1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .ingredients-section {
+    margin-top: 80px;
+    padding-top: 60px;
+  }
+
+  .ingredients-intro {
+    margin-bottom: 50px;
+  }
+
+  .ingredient-row,
+  .ingredient-row-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .ingredient-image {
+    width: 100%;
+    height: 180px;
+    order: 1;
+  }
+
+  .ingredient-content {
+    min-height: 180px;
+    padding: 30px 25px;
+    order: 2;
+  }
+
+  .ingredient-row-reverse .ingredient-image {
+    order: 1;
+  }
+
+  .ingredient-row-reverse .ingredient-content {
+    order: 2;
+  }
+}
+
+/* SABERES QUE PERMANECEN */
+
+.gastronomy-knowledge {
+  max-width: 1100px;
+  margin: 110px auto 0;
+  padding-top: 80px;
+  border-top: 1px solid var(--dorado);
+}
+
+.knowledge-header {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.knowledge-header h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.knowledge-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid #c9bfae;
+  border-bottom: 1px solid #c9bfae;
+}
+
+.knowledge-text {
+  padding: 35px 45px;
+  background: var(--blanco-calido);
+}
+
+.knowledge-text p {
+  margin: 0 0 20px;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+.knowledge-text p:last-child {
+  margin-bottom: 0;
+}
+
+.knowledge-highlight {
+  max-width: 900px;
+  margin: 55px auto 0;
+  text-align: center;
+}
+
+.knowledge-highlight span {
+  color: var(--terracota);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 600px) {
+
+  .gastronomy-knowledge {
+    margin-top: 80px;
+    padding-top: 60px;
+  }
+
+  .knowledge-header {
+    margin-bottom: 45px;
+  }
+
+  .knowledge-content {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-text {
+    padding: 30px 25px;
+  }
+
+  .knowledge-highlight {
+    margin-top: 40px;
+  }
+
+}
+
+/* GASTRONOMÍA, IDENTIDAD Y TURISMO */
+
+.gastronomy-tourism {
+  max-width: 1100px;
+  margin: 120px auto 0;
+  padding-top: 90px;
+  border-top: 1px solid var(--dorado);
+}
+
+.tourism-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tourism-intro h2 {
+  margin: 0 0 30px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.tourism-intro > p:last-child {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+.tourism-highlight {
+  max-width: 850px;
+  margin: 75px auto 0;
+  padding: 35px 50px;
+  background: var(--verde-manabi);
+  text-align: center;
+}
+
+.tourism-highlight p {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--blanco-calido);
+}
+
+@media (max-width: 600px) {
+
+  .gastronomy-tourism {
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+
+  .tourism-highlight {
+    margin-top: 55px;
+    padding: 35px 25px;
+  }
+
+}
+
+/* MÚSICA */
+
+.music-section {
+  min-height: 100vh;
+  padding: 120px 10%;
+  background: var(--blanco-calido);
+  color: var(--verde-manabi);
+}
+
+.music-intro {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.music-intro h2 {
+  margin: 0 0 40px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.music-intro p:not(.section-label) {
+  max-width: 850px;
+  margin: 0 auto 25px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+@media (max-width: 600px) {
+
+  .music-section {
+    padding: 90px 25px;
+  }
+
+}
+
+/* MÚSICA - RITMOS */
+
+.music-rhythms {
+  max-width: 1000px;
+  margin: 90px auto 0;
+  border-top: 1px solid var(--dorado);
+}
+
+.rhythm-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 35px;
+  padding: 45px 20px;
+  border-bottom: 1px solid #c9bfae;
+  transition: background-color 0.3s ease;
+}
+
+.rhythm-item:hover {
+  background: #eee8dc;
+}
+
+.rhythm-item > span {
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  padding-top: 5px;
+}
+
+.rhythm-item h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.rhythm-item p {
+  max-width: 700px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #465047;
+}
+
+@media (max-width: 600px) {
+  .music-rhythms {
+    margin-top: 65px;
+  }
+
+  .rhythm-item {
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+    padding: 35px 10px;
+  }
+
+  .rhythm-item h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* MÚSICA - INSTRUMENTOS */
+
+.music-instruments {
+  max-width: 1100px;
+  margin: 130px auto 0;
+  padding-top: 90px;
+  border-top: 1px solid var(--dorado);
+}
+
+.instruments-header {
+  max-width: 850px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.instruments-header h2 {
+  margin: 0 0 30px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.instruments-header p:last-child {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+.instruments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #c9bfae;
+  border: 1px solid #c9bfae;
+}
+
+.instrument-card {
+  min-height: 230px;
+  padding: 35px 40px;
+  background: var(--blanco-calido);
+  transition: background-color 0.3s ease;
+}
+
+.instrument-card:hover {
+  background: #eee8dc;
+}
+
+.instrument-card span {
+  display: block;
+  margin-bottom: 25px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.instrument-card h3 {
+  margin: 0 0 15px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.instrument-card p {
+  max-width: 430px;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+@media (max-width: 700px) {
+  .music-instruments {
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+
+  .instruments-header {
+    margin-bottom: 50px;
+  }
+
+  .instruments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instrument-card {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+}
+
+/* MÚSICA - ARTISTAS */
+
+.music-artists {
+  max-width: 1200px;
+  margin: 130px auto 0;
+  padding-top: 90px;
+  border-top: 1px solid var(--dorado);
+}
+
+.artists-header {
+  max-width: 850px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.artists-header h2 {
+  margin: 0 0 30px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.artists-header p:last-child {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #c9bfae;
+  border: 1px solid #c9bfae;
+}
+
+.artist-card {
+  background: var(--blanco-calido);
+  overflow: hidden;
+}
+
+.artist-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.artist-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.artist-card:hover .artist-image img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+.artist-content {
+  padding: 30px 25px 35px;
+}
+
+.artist-content span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--terracota);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+
+.artist-content h3 {
+  margin: 0 0 15px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--verde-manabi);
+}
+
+.artist-content p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .artists-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .music-artists {
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+
+  .artists-header {
+    margin-bottom: 50px;
+  }
+
+  .artists-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-image {
+    height: 320px;
+  }
+
+  .artist-content {
+    padding: 25px;
+  }
+}
+
+/* MÚSICA - CIERRE */
+
+.music-memory {
+  max-width: 1100px;
+  margin: 130px auto 0;
+  padding: 90px 0 20px;
+  border-top: 1px solid var(--dorado);
+}
+
+.memory-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.memory-content h2 {
+  margin: 0 0 30px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.memory-content p:last-child {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+.memory-line {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  margin-top: 70px;
+  padding-top: 25px;
+  border-top: 1px solid #c9bfae;
+}
+
+.memory-line span {
+  color: var(--terracota);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 600px) {
+  .music-memory {
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+
+  .memory-line {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+  }
+}
+
+/* CULTURA */
+
+.culture-section {
+  min-height: 100vh;
+  padding: 120px 10%;
+  background: var(--blanco-calido);
+  color: var(--verde-manabi);
+}
+
+.culture-intro {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.culture-intro h2 {
+  margin: 0 0 40px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.culture-intro p:not(.section-label) {
+  max-width: 850px;
+  margin: 0 auto 25px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+/* CULTURA */
+
+.culture-section {
+  padding: 35px 10% 90px;
+  background: var(--blanco-calido);
+  color: var(--verde-manabi);
+}
+
+/* LÍNEA DECORATIVA */
+
+.culture-section::before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 1px;
+  margin: 0 auto 40px;
+  background: var(--dorado);
+}
+
+.culture-intro {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.culture-intro h2 {
+  margin: 0 0 20px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.culture-intro p:not(.section-label) {
+  max-width: 850px;
+  margin: 0 auto 15px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #465047;
+}
+
+/* LENGUAS Y TRADICIONES */
+
+.culture-language {
+  margin-top: 90px;
+  padding-top: 70px;
+  border-top: 1px solid var(--dorado);
+}
+
+.language-header {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.language-header h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #c9bfae;
+  border: 1px solid #c9bfae;
+}
+
+.language-card {
+  min-height: 250px;
+  padding: 35px;
+  background: var(--blanco-calido);
+  transition: background-color 0.3s ease;
+}
+
+.language-card:hover {
+  background: #eee8dc;
+}
+
+.language-card span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.language-card h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.language-card p {
+  max-width: 480px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .culture-language {
+    margin-top: 65px;
+    padding-top: 50px;
+  }
+
+  .language-header {
+    margin-bottom: 35px;
+  }
+
+  .language-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .language-card {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .language-card h3 {
+    font-size: 1.7rem;
+  }
+
+}
+
+/* PUEBLOS E IDENTIDAD */
+
+.culture-identity {
+  max-width: 1100px;
+  margin: 55px auto 0;
+  padding-top: 45px;
+  border-top: 1px solid var(--dorado);
+}
+
+.identity-header {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.identity-header h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #c9bfae;
+  border: 1px solid #c9bfae;
+}
+
+.identity-card {
+  min-height: 250px;
+  padding: 35px;
+  background: var(--blanco-calido);
+  transition: background-color 0.3s ease;
+}
+
+.identity-card:hover {
+  background: #eee8dc;
+}
+
+.identity-card span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.identity-card h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.identity-card p {
+  max-width: 480px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .culture-section {
+    padding: 50px 25px 70px;
+  }
+
+  .culture-section::before {
+    width: 120px;
+    margin-bottom: 40px;
+  }
+
+  .culture-identity {
+    margin-top: 60px;
+    padding-top: 40px;
+  }
+
+  .identity-header {
+    margin-bottom: 35px;
+  }
+
+  .identity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .identity-card {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .identity-card h3 {
+    font-size: 1.7rem;
+  }
+
+}
+/* CIERRE DE CULTURA */
+
+.culture-closing {
+  max-width: 850px;
+  margin: 120px auto 20px;
+  text-align: center;
+}
+
+.closing-line {
+  width: 80px;
+  height: 1px;
+  margin: 0 auto 40px;
+  background: var(--dorado);
+}
+
+.culture-closing h2 {
+  margin: 0 0 25px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.culture-closing > p:last-child {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+@media (max-width: 700px) {
+
+  .culture-closing {
+    margin-top: 90px;
+  }
+
+  .closing-line {
+    margin-bottom: 30px;
+  }
+
+}
+/* ==============================
+   ARTE Y PATRIMONIO
+   ============================== */
+
+.art-section {
+  padding: 35px 10% 90px;
+  background: var(--blanco-calido);
+  color: var(--verde-manabi);
+}
+
+/* LÍNEA SUPERIOR */
+
+.art-section::before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 1px;
+  margin: 0 auto 55px;
+  background: var(--dorado);
+}
+
+.art-intro {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.art-intro h2 {
+  margin: 0 0 25px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--verde-manabi);
+}
+
+.art-intro p:not(.section-label) {
+  max-width: 850px;
+  margin: 0 auto 15px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #465047;
+}
+
+
+/* ==============================
+   SIGUIENTE BLOQUE DE ARTE
+   ============================== */
+
+.art-content {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  padding-top: 70px;
+  border-top: 1px solid var(--dorado);
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 700px) {
+
+  .art-section {
+    padding: 50px 25px 70px;
+  }
+
+  .art-section::before {
+    width: 120px;
+    margin-bottom: 40px;
+  }
+
+  .art-intro h2 {
+    font-size: clamp(2.4rem, 9vw, 3.5rem);
+  }
+
+  .art-content {
+    margin-top: 55px;
+    padding-top: 50px;
+  }
+
+}
+/* ==============================
+   ARTE
+   ============================== */
+
+.art-header {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.art-header h2 {
+  margin: 0 0 25px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.art-header p:last-child {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+
+/* TARJETAS DE ARTE */
+
+.art-museums {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #c9bfae;
+  border: 1px solid #c9bfae;
+}
+
+.art-card {
+  min-height: 260px;
+  padding: 35px 40px;
+  background: var(--blanco-calido);
+  transition: background-color 0.3s ease;
+}
+
+.art-card:hover {
+  background: #eee8dc;
+}
+
+.art-card span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.art-card h3 {
+  margin: 0 0 15px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.art-card p {
+  max-width: 480px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .art-header {
+    margin-bottom: 40px;
+  }
+
+  .art-museums {
+    grid-template-columns: 1fr;
+  }
+
+  .art-card {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .art-card h3 {
+    font-size: 1.7rem;
+  }
+
+}
+/* ==============================
+   ARQUITECTURA
+   ============================== */
+
+/* ==============================
+   ARQUITECTURA
+   ============================== */
+
+.architecture-section {
+  max-width: 1100px;
+  margin: 120px auto 0;
+  padding-top: 80px;
+  border-top: 1px solid var(--dorado);
+}
+
+.architecture-header {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.architecture-header h2 {
+  margin: 0 0 25px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.architecture-header p:last-child {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+
+/* CUADRÍCULA 2 × 2 */
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #c9bfae;
+  border: 1px solid #c9bfae;
+}
+
+
+/* TARJETAS */
+
+.architecture-card {
+  background: var(--blanco-calido);
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.architecture-card:hover {
+  background: #eee8dc;
+}
+
+
+/* IMÁGENES */
+
+.architecture-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.architecture-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.architecture-card:hover .architecture-image img {
+  transform: scale(1.03);
+}
+
+
+/* CONTENIDO */
+
+.architecture-content {
+  min-height: 230px;
+  padding: 30px 35px 35px;
+}
+
+.architecture-content span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.architecture-content h3 {
+  margin: 0 0 15px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--verde-manabi);
+}
+
+.architecture-content p {
+  max-width: 470px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #465047;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .architecture-section {
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+
+  .architecture-header {
+    margin-bottom: 45px;
+  }
+
+  .architecture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-image {
+    height: 220px;
+  }
+
+  .architecture-content {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .architecture-content h3 {
+    font-size: 1.6rem;
+  }
+
+}
+/* LITERATURA */
+
+.literature-section {
+  max-width: 1000px;
+  margin: 130px auto 0;
+  padding-top: 90px;
+  border-top: 1px solid var(--dorado);
+}
+
+.literature-header {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.literature-header h2 {
+  margin: 0 0 25px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--verde-manabi);
+}
+
+.literature-header p:last-child {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #465047;
+}
+
+.literature-list {
+  border-top: 1px solid #c9bfae;
+}
+
+.literature-row {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 30px;
+  padding: 30px 20px;
+  border-bottom: 1px solid #c9bfae;
+  transition: background-color 0.3s ease;
+}
+
+.literature-row:hover {
+  background: #eee8dc;
+}
+
+.literature-row > span {
+  padding-top: 5px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.literature-row h3 {
+  margin: 0 0 7px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--verde-manabi);
+}
+
+.literature-row p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #465047;
+}
+
+/* LITERATURA - RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .literature-section {
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+
+  .literature-header {
+    margin-bottom: 45px;
+  }
+
+  .literature-row {
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+    padding: 25px 10px;
+  }
+
+  .literature-row h3 {
+    font-size: 1.4rem;
+  }
+
+}
+
+
+
+/* PATRIMONIO CULTURAL */
+
+.heritage-section {
+  max-width: 1100px;
+  margin: 120px auto 0;
+  padding-top: 80px;
+  border-top: 1px solid var(--dorado);
+}
+
+.heritage-header {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.heritage-header .section-label {
+  margin: 0 0 30px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.heritage-header h2 {
+  margin: 0 0 25px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--blanco-calido);
+}
+
+.heritage-header p:last-child {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--arena);
+}
+
+/* TARJETAS DE PATRIMONIO */
+
+.heritage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #c9bfae;
+  border: 1px solid #c9bfae;
+}
+
+.heritage-card {
+  min-height: 280px;
+  padding: 38px 40px;
+  background: var(--blanco-calido);
+  transition: background-color 0.3s ease;
+}
+
+.heritage-card:hover {
+  background: #eee8dc;
+}
+
+.heritage-image {
+  display: block;
+  width: 100%;
+  height: 230px;
+  margin-bottom: 28px;
+  object-fit: cover;
+}
+
+.heritage-card span {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.heritage-card h3 {
+  margin: 0 0 18px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--verde-manabi);
+}
+
+.heritage-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #465047;
+}
+
+/* CIERRE */
+
+.heritage-closing {
+  max-width: 800px;
+  margin: 100px auto 20px;
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 1px solid var(--dorado);
+}
+
+.heritage-closing h3 {
+  margin: 0 0 22px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--blanco-calido);
+}
+
+.heritage-closing p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--arena);
+}
+
+/* PATRIMONIO - RESPONSIVE */
+
+@media (max-width: 700px) {
+  .heritage-section {
+    margin-top: 85px;
+    padding-top: 55px;
+  }
+
+  .heritage-header {
+    margin-bottom: 40px;
+  }
+
+  .heritage-header .section-label {
+    margin-bottom: 24px;
+  }
+
+  .heritage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heritage-card {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .heritage-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .heritage-closing {
+    margin-top: 65px;
+    padding: 35px 10px;
+  }
+}
+
+/* MAPA INTERACTIVO DE ECUADOR */
+
+.mapa-interactivo {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 55px 40px;
+  background: var(--blanco-calido);
+  color: var(--verde-manabi);
+}
+
+.mapa-encabezado {
+  max-width: 750px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.mapa-encabezado .section-label {
+  margin-bottom: 20px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+}
+
+.mapa-encabezado h3 {
+  margin: 0 0 20px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--verde-manabi);
+}
+
+.mapa-encabezado p:last-child {
+  margin: 0 auto;
+  max-width: 650px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #465047;
+}
+
+.mapa-ecuador {
+  width: 100%;
+  height: 500px;
+  background: var(--blanco-calido);
+  border: 1px solid #c9bfae;
+  z-index: 1;
+}
+
+.mapa-provincia-actual {
+  margin: 25px 0 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #465047;
+}
+
+.mapa-provincia-actual strong {
+  color: var(--terracota);
+}
+
+.mapa-mensaje {
+  padding: 30px;
+  text-align: center;
+  color: var(--arena);
+}
+
+@media (max-width: 700px) {
+  .mapa-interactivo {
+    margin: 55px 20px;
+    padding: 35px 20px;
+  }
+
+  .mapa-ecuador {
+    height: 380px;
+  }
+}
+
+/* MAPA ILUSTRADO DE ECUADOR */
+
+.province-map {
+  max-width: 1000px;
+  margin: 100px auto 20px;
+  padding: 70px 30px 0;
+  border-top: 1px solid var(--dorado);
+}
+
+.province-map-header {
+  max-width: 760px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.province-map-header .section-label {
+  margin-bottom: 20px;
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+}
+
+.province-map-header h3 {
+  margin: 0 0 20px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--verde-manabi);
+}
+
+.province-map-header p:last-child {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #465047;
+}
+
+.province-map-image {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #d5c8b3;
+  box-shadow: 0 12px 35px rgba(16, 37, 31, 0.08);
+}
+
+@media (max-width: 700px) {
+  .province-map {
+    margin-top: 65px;
+    padding: 45px 0 0;
+  }
+
+  .province-map-header {
+    margin-bottom: 25px;
+  }
+
+  .province-map-image {
+    width: 100%;
+  }
+}

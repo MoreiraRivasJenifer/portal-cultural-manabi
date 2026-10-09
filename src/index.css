@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --verde-manabi: #10251F;
+  --arena: #E8DDC8;
+  --azul-mar: #2D6A6A;
+  --terracota: #B86B4B;
+  --dorado: #C9A45C;
+  --blanco-calido: #F7F4ED;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--verde-manabi);
+}
+
+button,
+a {
+  font-family: inherit;
+}
